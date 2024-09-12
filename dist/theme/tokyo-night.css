@@ -5,6 +5,10 @@
  */
 @import url(./fonts/ubuntu/stylesheet.css);
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+:root {
+  --red: rgb(255, 117, 127);
+}
+
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222;
 }
@@ -398,11 +402,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
 img[data-type=qrcode] {
   cursor: pointer;
-  transition: filter 0.15s ease;
-  filter: grayscale(0%) contrast(1);
-}
-img[data-type=qrcode]:hover {
-  filter: grayscale(50%) contrast(10);
 }
 
 pre code {

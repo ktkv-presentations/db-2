@@ -56,6 +56,10 @@ $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1em;
 
+:root {
+  --red: rgb(255, 117, 127);
+}
+
 // Change text colors against light slide backgrounds
 @include light-bg-text-color(#222);
 

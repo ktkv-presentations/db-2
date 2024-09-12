@@ -20,136 +20,464 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>
-					Beautiful presentations
-				</h1>
-				<h2>New features</h2>
-				<ul>
-					<li>Nerd icons </li>
-					<li><code class="js">(inline) => code("highlighting")</code></li>
-					<li>Automatic QR Code generation</li>
-					<li>and much more!</li>
-				</ul>
+				<h1>Structured Query Language</h1>
+				<h2>SQL</h2>
+				<img class="r-stretch" alt="https://github.com/ktkv-presentations/db-2" data-type="qrcode">
+				<br>
+				<code class="sql">SELECT * FROM lecture WHERE information = 'useful';</code>
 			</section>
 			<section>
-				<h1>
-					Custom TokyoNight theme
-				</h1>
-				<h2 class="fragment">That has</h2>
-				<h3 class="fragment">Multi</h3>
-				<h4 class="fragment">Level</h4>
-				<h5 class="fragment">Heading</h5>
-				<h6 class="fragment">Coloring</h6>
-				<h6>Thanks to this project <a href="https://github.com/tcmmichaelb139/obsidian-tokyonight"></a> for the
-					colorscheme!</h6>
-			</section>
-			<section>
+				<section data-auto-animate="">
+					<h1>Structured Query Language</h1>
+					<h2>SQL</h2>
+					<img class="r-stretch"
+						src="https://preview.redd.it/266xy4z1s7q01.jpg?width=640&crop=smart&auto=webp&s=7e776bda941235d004abfbea0b8bc46ca0316da7"
+						alt="">
+					<h3>эс-кью-эл</h3>
+				</section>
+				<section data-auto-animate="">
+					<h1>Structured Query Language</h1>
+					<h2>SQL</h2>
+					<p>язык структурированных запросов, используемый для управления и работы с реляционными базами данных</p>
+					<div class="grid grid-cols-2 gap-4">
+						<div class="self-center">
+							SQL был разработан в 1970-х годах в IBM Эдгаром Коддом
+						</div>
+						<img src="https://upload.wikimedia.org/wikipedia/ru/5/58/Edgar_F_Codd.jpg" alt="">
+					</div>
+				</section>
 				<section>
-					<h1>Tailwind CSS</h1>
+					<h1>История и эволюция SQL</h1>
+					<ol>
+						<li>
+							<h5>1970</h5>Эдгар Кодд предлагает реляционную модель данных. Начинается разработка SQL в IBM
+						</li>
+						<li>
+							<h5>1986</h5>SQL стандартизирован Американским национальным институтом стандартов (ANSI) и Международной
+							организацией по стандартизации (ISO)
+						</li>
+						<li>
+							<h5>1990+</h5>SQL постоянно развивается и дополняется новыми функциями, такими как поддержка триггеров,
+							хранимых процедур, полнотекстового поиска и других возможностей
+						</li>
+					</ol>
+				</section>
+				<section>
+					<h1>Роль SQL в работе с реляционными базами данных</h1>
+					<ul>
+						<li><code class="plaintext">Управление данными</code> - позволяет вставлять, изменять и удалять данные в
+							таблицах</li>
+						<li><code class="plaintext">Управление структурой данных</code> - используется для создания и изменения
+							структур баз данных (таблицы, индексы и представления)</li>
+						<li><code class="plaintext">Управление данными</code> - возможности для настройки прав доступа, защиты
+							данных и управления транзакциями</li>
+						<li><code class="plaintext">Управление данными</code> - позволяет фильтровать, сортировать и объединять
+							данные из различных таблиц</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Основные задачи SQL</h1>
+					<ul>
+						<li>Создание и модификация таблиц</li>
+						<li>Извлечение данных</li>
+						<li>Управление целостностью данных</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section data-auto-animate="">
+					<h1>Таблицы</h1>
+					<p>основные структуры данных в РМД, информация хранится в виде строк и столбцов</p>
+					<table>
+						<tr>
+							<th>id</th>
+							<th>first_name</th>
+							<th>last_name</th>
+							<th>department</th>
+						</tr>
+						<tr>
+							<th>1</th>
+							<th>John</th>
+							<th>Doe</th>
+							<th>HR</th>
+						</tr>
+						<tr>
+							<th>2</th>
+							<th>Jane</th>
+							<th>Smith</th>
+							<th>IT</th>
+						</tr>
+					</table>
+				</section>
+				<section data-auto-animate="">
+					<h1>Таблицы</h1>
+					<p><code class="plaintext">Запись (строка)</code> представляет один объект данных или одну запись</p>
+					<table>
+						<tr>
+							<th>id</th>
+							<th>first_name</th>
+							<th>last_name</th>
+							<th>department</th>
+						</tr>
+						<tr>
+							<th style="color: var(--red) !important">1</th>
+							<th style="color: var(--red) !important">John</th>
+							<th style="color: var(--red) !important">Doe</th>
+							<th style="color: var(--red) !important">HR</th>
+						</tr>
+						<tr>
+							<th>2</th>
+							<th>Jane</th>
+							<th>Smith</th>
+							<th>IT</th>
+						</tr>
+					</table>
+				</section>
+				<section data-auto-animate="">
+					<h1>Таблицы</h1>
+					<p><code class="plaintext">Поле (столбец)</code> представляет атрибут или характеристику объекта</p>
+					<table>
+						<tr>
+							<th>id</th>
+							<th style="color: var(--red) !important">first_name</th>
+							<th>last_name</th>
+							<th>department</th>
+						</tr>
+						<tr>
+							<th>1</th>
+							<th style="color: var(--red) !important">John</th>
+							<th>Doe</th>
+							<th>HR</th>
+						</tr>
+						<tr>
+							<th>2</th>
+							<th style="color: var(--red) !important">Jane</th>
+							<th>Smith</th>
+							<th>IT</th>
+						</tr>
+					</table>
+				</section>
+				<section data-auto-animate="">
+					<h1>Таблицы</h1>
+					<h2>PRIMARY KEY</h2>
+					<h3>Первичный ключ</h3>
+					<p>уникальный идентификатор для каждой записи в таблице</p>
+					<table>
+						<tr>
+							<th style="color: var(--red) !important">id</th>
+							<th>first_name</th>
+							<th>last_name</th>
+							<th>department</th>
+						</tr>
+						<tr>
+							<th style="color: var(--red) !important">1</th>
+							<th>John</th>
+							<th>Doe</th>
+							<th>HR</th>
+						</tr>
+						<tr>
+							<th style="color: var(--red) !important">2</th>
+							<th>Jane</th>
+							<th>Smith</th>
+							<th>IT</th>
+						</tr>
+					</table>
+					<h5>Он должен быть уникальным для каждой строки и не может быть пустым (NULL)</h5>
+				</section>
+				<section data-auto-animate="">
+					<h1>Таблицы</h1>
+					<h2>FOREIGN KEYS</h2>
+					<h3>Внешний ключ</h3>
+					<p>поле, которое связывает таблицу с другой таблицей</p>
+				</section>
+				<section data-auto-animate="">
+					<h1>Таблицы</h1>
+					<h2>Связи между таблицами
+					</h2>
+					<div class="grid grid-cols-3 gap-3">
+						<div class="border-b flex flex-col">
+							<h4>Один к одному</h4>
+							<p>Каждая запись из одной таблицы соответствует одной записи в другой таблице</p>
+							<div style="font-size: 4em;">󱒣</div>
+						</div>
+						<div class="border-b flex flex-col">
+							<h4>Один ко многим</h4>
+							<p>Одна запись в первой таблице может соответствовать нескольким записям во второй таблице</p>
+							<div style="font-size: 4em;">󱒢</div>
+						</div>
+						<div class="border-b flex flex-col">
+							<h4>Многие ко многим</h4>
+							<p>Каждая запись из одной таблицы может быть связана с несколькими записями из другой таблицы, и
+								наоборот</p>
+							<div style="font-size: 4em;">󱒖</div>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section>
+				<section data-auto-animate="">
+					<h1>Типы данных в SQL</h1>
+					<h2>Целые числа</h2>
+					<div>Могут быть как со знаком, так и без знака</div>
+					<br>
+					<div class="grid grid-cols-2 gap-4">
+						<div>
+							<h4>Signed</h4>
+							<div>от -128 до 127</div>
+						</div>
+						<div>
+							<h4>Unsigned</h4>
+							<div>от 0 до 256</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate="">
+					<h1>Типы данных в SQL</h1>
+					<h2>Целые числа</h2>
+					<div class="grid grid-cols-3 gap-4">
+						<div>
+							<h4>TINYINT</h4>
+							<div>\( \frac{2^{7}}{2} \)</div>
+							<br>
+							<div>-2,147,483,648 до 2,147,483,647</div>
+						</div>
+						<div>
+							<h4>SMALLINT</h4>
+							<div>\( \frac{2^{15}}{2} \)</div>
+							<br>
+							<div>-32,768 до 32,767</div>
+						</div>
+						<div>
+							<h4>MEDIUMINT</h4>
+							<div>\( \frac{2^{23}}{2} \)</div>
+							<div>-8,388,608 до 8,388,607</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate="">
+					<h1>Типы данных в SQL</h1>
+					<h2>Целые числа</h2>
+					<div class="grid grid-cols-2 gap-4">
+						<div>
+							<h4>INT</h4>
+							<div>\( \frac{2^{31}}{2} \)</div>
+							<br>
+							<div>-2,147,483,648 до 2,147,483,647</div>
+						</div>
+						<div>
+							<h4>BIGINT</h4>
+							<div>\( \frac{2^{63}}{2} \)</div>
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGwqxCuGIYLlmm5cd8N4NKgAJZ7mw63UTjew&s"
+								alt="">
+						</div>
+					</div>
+					<h4>9,223,372,036,854,775,808</h4>
+				</section>
+				<section data-auto-animate="">
+					<h1>Типы данных в SQL</h1>
+					<h2>Дробные числа</h2>
+					<h4>DECIMAL(p, s)</h4>
+					<div>
+						<div>
+							<code class="plaintext">p</code> - общее количество цифр
+						</div>
+						<div>
+							<code class="plaintext">s</code> - количество цифр после запятой
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate="">
+					<h1>Типы данных в SQL</h1>
+					<h2>Строки</h2>
+					<div class="grid grid-cols-2 gap-4">
+						<div>
+							<h4>CHAR(N)</h4>
+							<div>строка фиксированной длины</div>
+						</div>
+						<div>
+							<h4>VARCHAR(N)</h4>
+							<div>строка переменной длины</div>
+						</div>
+					</div>
+					<br>
+					<div><code class="plaintext">n</code> - количество символов</div>
+				</section>
+				<section data-auto-animate="">
+					<h1>Типы данных в SQL</h1>
+					<h2>Дата и время</h2>
 					<div class="grid grid-cols-2 gap-8">
 						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
+							<h4>DATE</h4>
+							<div>дата в формате <code class="plaintext">YYYY-MM-DD</code></div>
+							<div>от <code class="plaintext">1000-01-01</code> до <code class="plaintext">9999-12-31</code></div>
 						</div>
 						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
+							<h4>TIME</h4>
+							<div>время в формате <code class="plaintext">HH:MM:SS</code></div>
+							<div>от <code class="plaintext">-838:59:59</code> до <code class="plaintext">838:59:59</code></div>
 						</div>
-						<div class="col-span-2">
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
+						<div>
+							<h4>DATETIME</h4>
+							<div>дата и время в формате <code class="plaintext">YYYY-MM-DD HH:MM:SS</code></div>
+						</div>
+						<div>
+							<h4>TIMESTAMP</h4>
+							<div>дата и время в формате <code class="plaintext">1970-01-01 00:00:01 UTC</code></div>
+						</div>
+						<div>
+							<h4>YEAR</h4>
+							<div>год в формате <code class="plaintext">YYYY</code></div>
 						</div>
 					</div>
+				</section>
+				<section data-auto-animate="">
+					<h1>Типы данных в SQL</h1>
+					<h2>BLOB</h2>
+					<h3 class="fragment strike">BLOB FISH</h3>
+					<img class="fragment fade-out" src="https://images.thespinoff.co.nz/1/2023/06/Meme-Fish.png" alt="">
+				</section>
+				<section data-auto-animate="">
+					<h1>Типы данных в SQL</h1>
+					<h2>BLOB</h2>
+					<h3>Binary Large Object</h3>
+					<div>для хранения больших двоичных объектов</div>
+				</section>
+			</section>
+			<section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<img class="r-stretch"
+						src="https://preview.redd.it/423ha0w8lq181.png?auto=webp&s=c3aa55b5356dddad8413da030a701236a85fead3" alt="">
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<div>
+						<h2>Data Definition Language (DDL)</h2>
+						<div class="border-y">используются для определения и изменения структуры базы данных, такой как создание,
+							изменение и удаление
+							таблиц и других объектов</div>
+					</div>
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>CREATE TABLE</h2>
+					<div>Создание новой таблицы</div>
+					<pre><code class="sql" data-trim data-noescape>
+CREATE TABLE employees (
+	...
+);
+				</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>ALTER TABLE</h2>
+					<div>
+						Изменение структуры существующей таблицы, добавление или удаление столбцов</div>
+					<pre><code class="sql" data-trim data-noescape>
+ALTER TABLE employees 
+ADD COLUMN salary DECIMAL(10, 2);
+				</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>DROP TABLE</h2>
+					<div>Удаление таблицы из базы данных</div>
+					<pre><code class="sql" data-trim data-noescape>DROP TABLE employees;</code></pre>
 				</section>
 				<section>
-					<h1>Custom classes</h1>
-					<div class="grid grid-cols-3 gap-8">
-						<div class="border-r">
-							<h5>border-r</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-						<div class="border-o">
-							<h5>border-o</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-						<div class="border-y">
-							<h5>border-y</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
+					<h1>Краткий гайд</h1>
+					<h2>Как испортить настроение всем в ГИБДД</h2>
+					<img class="r-stretch" src="https://cs12.pikabu.ru/images/big_size_comm/2021-08_3/1628680707143028155.jpg"
+						alt="">
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>Data Manipulation Language (DML)</h2>
+					<div class="border-y">
+						операторы DML позволяют изменять данные в таблицах (вставка, изменение, удаление)
 					</div>
 				</section>
-			</section>
-			<section>
-				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<div>
-						Now also has Tokyo Night <code>highlight.js</code> highlighting implementation
-					</div>
-					<pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>SELECT</h2>
+					<div>Извлечение данных из таблицы</div>
+					<pre><code class="sql" data-trim data-noescape>
+						SELECT first_name, last_name 
+						FROM employees 
+						WHERE department = 'IT';</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>INSERT INTO</h2>
+					<div>Добавление новых данных в таблицу</div>
+					<pre><code class="sql" data-trim data-noescape>
+INSERT INTO employees (first_name, last_name, department) 
+VALUES ('John', 'Doe', 'HR');
 					</code></pre>
 				</section>
-				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<h5>Inline code highlighting is now also supported!</h5>
-					<p>
-						Just wrap your code with <code>&lt;code&gt;</code> tag and get
-						highlighting like this <code class="js">const foo = () => {return bar}</code>!
-					</p>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>UPDATE</h2>
+					<div>Изменение данных в существующих записях</div>
+					<pre><code class="sql" data-trim data-noescape>
+UPDATE employees
+SET department = 'Sales' WHERE id = 1;
+					</code></pre>
 				</section>
-			</section>
-			<section>
-				<h1>Mermaid for beautiful diagrams!</h1>
-				<div class="mermaid">
-					<pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre>
-				</div>
-				<h4>Check documentation <a href="https://mermaid.js.org/config/usage.html">here</a>!</h4>
-			</section>
-			<section>
-				<h1>Now supports Nerd font icons!</h1>
-				<div>Nerdy project that adds icons to font itself</div>
-				<h6>Checkout their site for icons like this <a href="https://www.nerdfonts.com/">󰖟</a>!
-				</h6>
-			</section>
-			<section>
-				<h1>Now supports automatic QRCode generation!</h1>
-				<div>With GoQR you can just add data-type and alt attributes to your <code
-						class="html">&lt;img alt="https://goqr.me/" data-type="qrcode" / &gt;</code> tag!</div>
-				<img class="r-stretch" alt="https://goqr.me/" data-type="qrcode" />
-				</h6>
-			</section>
-			<section>
-				<h1>New changes on the way!</h1>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>DELETE</h2>
+					<div>Удаление данных из таблицы</div>
+					<pre><code class="sql" data-trim data-noescape>
+DELETE FROM employees
+WHERE id = 1;
+					</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>Data Control Language (DCL)</h2>
+					<div class="border-y">используется для управления правами доступа к данным</div>
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>GRANT</h2>
+					<div>Предоставление прав пользователям на выполнение определенных действий</div>
+					<pre><code class="sql" data-trim data-noescape>
+GRANT SELECT ON employees
+TO 'user_name';
+					</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>REVOKE</h2>
+					<div>Отзыв ранее предоставленных прав доступа</div>
+					<pre><code class="sql" data-trim data-noescape>
+REVOKE SELECT ON employees
+FROM 'user_name';
+					</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>Transaction Control Language (TCL)</h2>
+					<div class="border-y">используются для управления транзакциями, позволяя группировать несколько операций в
+						одну транзакцию, которую можно подтвердить или отменить</div>
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>COMMIT</h2>
+					<div>Подтверждение транзакции, запись изменений в базу данных</div>
+					<pre><code class="sql" data-trim data-noescape>COMMIT;</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1>Синтаксис операторов SQL</h1>
+					<h2>ROLLBACK</h2>
+					<div>Откат всех изменений, выполненных в транзакции, до последнего сохранения</div>
+					<pre><code class="sql" data-trim data-noescape>ROLLBACK;</code></pre>
+				</section>
+				<section>
+					<h1>Don't forget ;</h1>
+					<img src="https://i.redd.it/w4lkcpnclc641.jpg" alt="">
+				</section>
 			</section>
 		</div>
 	</div>
@@ -160,6 +488,7 @@ var foo = {
 	<script src="plugin/highlight/highlight.js"></script>
 	<script src="plugin/qrcode/qrcode.js"></script>
 	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/math/math.js"></script>
 
 	<script>
 		tailwind.config = {
@@ -172,27 +501,27 @@ var foo = {
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
-		
+
 		const colors = {
-    blue0: 'rgb(61, 89, 161)',
-    blue: 'rgb(122, 162, 247)',
-    cyan: 'rgb(125, 207, 255)',
-    magenta: 'rgb(187, 154, 247)',
-    orange: 'rgb(255, 158, 100)',
-    yellow: 'rgb(224, 175, 104)',
-    green: 'rgb(158, 206, 106)',
-    teal: 'rgb(26, 188, 156)',
-    red: 'rgb(255, 117, 127)',
-    red1: 'rgb(219, 75, 75)',
-    fg: 'rgb(192, 202, 245)',
-    bg: 'rgb(26, 27, 38)',
-		transparent: "#00000000"
-};
+			blue0: 'rgb(61, 89, 161)',
+			blue: 'rgb(122, 162, 247)',
+			cyan: 'rgb(125, 207, 255)',
+			magenta: 'rgb(187, 154, 247)',
+			orange: 'rgb(255, 158, 100)',
+			yellow: 'rgb(224, 175, 104)',
+			green: 'rgb(158, 206, 106)',
+			teal: 'rgb(26, 188, 156)',
+			red: 'rgb(255, 117, 127)',
+			red1: 'rgb(219, 75, 75)',
+			fg: 'rgb(192, 202, 245)',
+			bg: 'rgb(26, 27, 38)',
+			transparent: "#00000000"
+		};
 
 		Reveal.initialize({
 			hash: true,
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMermaid],
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMermaid, RevealMath.KaTeX],
 			slideNumber: true,
 			mermaid: {
 				securityLevel: 'loose',
